@@ -3,21 +3,106 @@
 <head>
     <title>Do I Need A Mask?</title>
     <meta charset="UTF-8">
-    <meta name="viewport">
     <link rel="stylesheet" href="assets\css\style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 <body>
-    <h1 class="title" style="display: flex;">Do I Need A Mask?</h1>
-    <h2 class="subtitle">Enter State Here</h2>
-    <div style="display: flex;" class="bulma-ltr-rtl-mixin">
-        <button class="button is-primary">Search</button>
-    </div>
 
-    <div style="display: flex;" class="bulma-ltr-rtl-mixin">
-        <h1>Output</h1>
-        <input class="input bulma-placeholder-mixin" type="text" placeholder="Answer to your question here">
-    </div>
+    <hero class="hero is-medium is-link">
+        <div class="hero-body">
+            <h1 class="title">Do I Need A Mask?</h1>
+        </div>
+    </hero>
+
+    <section class="section">
+        <h2 class="title">Search Here</h2>
+        <form class="control">
+            <input class="input" type="text" placeholder="Enter City">
+            <div class="select">
+            <select>
+                <option>Select state</option>
+                <option id="AL">Alabama</option>
+                <option id="AK">Alaska</option>
+                <option id="AZ">Arizona</option>
+                <option id="AR">Arkansas</option>
+                <option id="CA">California</option>
+                <option id="CO">Colorado</option>
+                <option id="CT">Connecticut</option>
+                <option id="DE">Delaware</option>
+                <option id="FL">Florida</option>
+                <option id="GA">Georgia</option>
+                <option id="HI">Hawaii</option>
+                <option id="ID">Idaho</option>
+                <option id="IL">Illinois</option>
+                <option id="IN">Indiana</option>
+                <option id="IA">Iowa</option>
+                <option id="KS">Kansas</option>
+                <option id="KY">Kentucky</option>
+                <option id="LA">Louisiana</option>
+                <option id="ME">Maine</option>
+                <option id="MD">Maryland</option>
+                <option id="MA">Massachusetts</option>
+                <option id="MI">Michigan</option>
+                <option id="MN">Minnesota</option>
+                <option id="MS">Mississippi</option>
+                <option id="MO">Missouri</option>
+                <option id="MT">Montana</option>
+                <option id="NE">Nebraska</option>
+                <option id="NV">Nevada</option>
+                <option id="NH">New Hamshire</option>
+                <option id="NJ">New Jersey</option>
+                <option id="NM">New Mexico</option>
+                <option id="NY">New York</option>
+                <option id="NC">North Carolina</option>
+                <option id="ND">North Dakota</option>
+                <option id="OH">Ohio</option>
+                <option id="OK">Oklahoma</option>
+                <option id="OR">Oregon</option>
+                <option id="PA">Pennsylvania</option>
+                <option id="RI">Rhode Island</option>
+                <option id="SC">South Carolina</option>
+                <option id="SD">South Dakota</option>
+                <option id="TN">Tennessee</option>
+                <option id="TX">Texas</option>
+                <option id="UT">Utah</option>
+                <option id="VT">Vermont</option>
+                <option id="VA">Virginia</option>
+                <option id="WA">Washington</option>
+                <option id="WV">West Virginia</option>
+                <option id="WI">Wisconsin</option>
+                <option id="WY">Wyoming</option>
+            </select>
+            </div>
+         <button class="button is-primary" id="button">Search</button>
+        </form>
+    </section>
+    </section>
+
+    <section class="section is-large">
+        <h2 class="title">Mask:</h2>
+        <div class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+              <!-- Any other Bulma elements you want -->
+            </div>
+            <button class="modal-close is-large" aria-label="close">Submit</button>
+          </div>
+    </section>
+
+    <section class="section">
+        <h3 class="subtitle">Additional Info</h3>
+        <img src=".\assets\images\masks.jpg"/>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="content has-text-centered">
+                <p>Created by Isaiah, Monica & Nadya</p><br>
+                <p>2022</p>
+            </div>
+        </div>
+    </footer>
+
     <script src="assets\js\script.js"></script>
 </body>
 </html>
