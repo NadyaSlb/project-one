@@ -5,6 +5,10 @@ var button = document.querySelector('#button');
 var key = "827872d8b7d2aff6bb0c70ca4245ef14";
 //var optionAl = document.querySelector('#AL');
 var stateId = "";
+var locationsList = document.querySelector('#locationsList');
+var savedCity = "";
+var savedProvince = "";
+
 
 
 var formSearchHandler = function(event) {
@@ -17,6 +21,9 @@ var formSearchHandler = function(event) {
 	getNewcases(province);
 	getstateId(province);
 	getCoordinates(city);
+	SaveLocation(city, province);
+	clearList();
+	displayLocations();
 	//var stateId = optionAl.getAttribute("id");
 //console.log(stateId);
 //getstateId(province, stateId);
@@ -239,6 +246,49 @@ var getstateId = function(province){
 	}
 	console.log(stateId);
 }
+
+// save cities to local storage
+var SaveLocation = function(city, province){
+    newLocations = JSON.parse(localStorage.getItem("locations"));
+	if (!newLocations) {
+		newLocations = {
+		  cities: [],
+		  provinces: [],
+		};
+	};
+    newLocations.cities.push(city);
+	newLocations.provinces.push(province);
+    console.log(newLocations);
+    localStorage.setItem("locations", JSON.stringify(newLocations));
+  }
+
+// list of saved cities
+var displayLocations = function(savedCity, savedProvince){
+	var locations = {cities:[], provinces:[]};
+	locations = JSON.parse(localStorage.getItem("locations"));
+	if (!locations) {
+		locations = {
+		  cities: [],
+		  provinces: [],
+		};
+	};
+	console.log(locations);
+	console.log(locations.cities[0]);
+	for (var i = 0; i < locations.cities.length; i++) {
+	  savedCity = locations.cities[i];
+	  savedProvince = locations.provinces[i];
+	  var locationE1 = document.createElement("li");
+	  locationsList.appendChild(locationE1);
+	  locationE1.textContent = savedCity + " , " + savedProvince;
+	}
+  }
+
+// clear previous search history
+var clearList = function(){
+	locationsList.innerHTML = "";
+  }
+
+displayLocations();
 //modal
 var searchButton = document.querySelector("#button");
 var modalBg = document.querySelector(".modal-background");
@@ -258,4 +308,4 @@ closeButton.addEventListener("click", () => {
 });
 
 button.addEventListener("click", formSearchHandler);
-button.addEventListener("click", formSearchHandler);
+
