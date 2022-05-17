@@ -3,7 +3,7 @@
 <head>
     <title>Do I Need A Mask?</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="assets\css\style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 <body>
@@ -78,11 +78,23 @@
     </section>
     </section>
 
-    <section class="section is-large">
-        <h2 class="title">Mask:</h2>
-        <div class="modal">
+    <section class="section is-medium">
+        <h2 class="title">Mask Recomendations:</h2>
+        <h3 class="title" id="response">Covid-19</h3>
+        <div class ="active-style">
+        <h2  id="Cases">Active Cases</h2>
+        </div>
+        <div>
+        <h2 class = "new-style" id="todays-cases">Current Cases</h2>
+      </div>
+      <h3 class="title" id="air-1">Air Quality</h3>
+    
+        <div class="modal ">
             <div class="modal-background"></div>
-            <div class="modal-content">
+            <div class="modal-content has-background-white">
+              <h2 class = "title mb-6 has-text-centered has-text-danger pt-4">Caution!</h2>
+              <p class="text p-5">These reccomendations are arbitrary and have not been reviewed by the CDC. For more information on this matter please visit, <a href="https://covid.cdc.gov/covid-data-tracker/#datatracker-home" target="_blank">Open CDC COVID-19 Data Tracker</a> </p>
+              <button class="button modal-content is-link " id="button2">Close</button>
               <!-- Any other Bulma elements you want -->
             </div>
             <button class="modal-close is-large" aria-label="close">Submit</button>
@@ -91,6 +103,7 @@
 
     <section class="section">
         <h3 class="subtitle">Additional Info</h3>
+       <!-- <img src="\assets\images\masks.jpg"/>-->
     </section>
 
     <footer>
@@ -102,6 +115,6 @@
         </div>
     </footer>
 
-    <script src="assets\js\script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
