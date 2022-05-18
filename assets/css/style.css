@@ -1,0 +1,20 @@
+.bulma-placeholder-mixin {
+    @include placeholder {
+      color: lightblue;
+    }
+  }
+  
+  .bulma-ltr-rtl-mixin {
+    padding: 0.5em 1em;
+    margin-right: -1px;
+  }
+  
+  .active-style {
+    font-size: x-large;
+    color: blue;
+  }
+  
+  .new-style {
+    font-size: x-large;
+    color:red ;
+  }
